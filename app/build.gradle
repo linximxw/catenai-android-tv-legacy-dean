@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.catenai.hotelos.legacy'
-    compileSdk 28
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.catenai.hotelos.legacy"
@@ -14,6 +14,12 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"https://catenai.cn\""
+        buildConfigField "String", "DEVICE_VENDOR", "\"daqian\""
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     buildTypes {
