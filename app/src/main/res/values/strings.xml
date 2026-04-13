@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Catenai Legacy 4.4</string>
+    <string name="splash_title">Catenai Legacy</string>
+    <string name="splash_subtitle">Android 4.4 baseline is ready for binding flow integration.</string>
+</resources>
