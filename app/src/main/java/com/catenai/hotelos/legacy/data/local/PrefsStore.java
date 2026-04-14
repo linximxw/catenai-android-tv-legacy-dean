@@ -19,7 +19,7 @@ public class PrefsStore {
         ));
     }
 
-    PrefsStore(StringStore stringStore) {
+    public PrefsStore(StringStore stringStore) {
         this.stringStore = stringStore;
     }
 
@@ -64,7 +64,7 @@ public class PrefsStore {
         return value == null ? "" : value.trim();
     }
 
-    interface StringStore {
+    public interface StringStore {
         String getString(String key);
 
         void putString(String key, String value);

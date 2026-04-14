@@ -9,6 +9,7 @@ import android.provider.Settings;
 import android.util.DisplayMetrics;
 
 import com.catenai.hotelos.legacy.BuildConfig;
+import com.catenai.hotelos.legacy.data.model.DeviceInfo;
 
 public final class DeviceInfoProvider {
     private static final String DEVICE_TYPE_ANDROID_TV = "ANDROID_TV";
@@ -88,6 +89,16 @@ public final class DeviceInfoProvider {
 
     public String getDeviceFingerprint() {
         return DeviceFingerprint.generateFromParts(getMacAddress(), getSerial(), getBoard());
+    }
+
+    public DeviceInfo getBindDeviceInfo() {
+        return new DeviceInfo(
+                getMacAddress(),
+                getDeviceModel(),
+                getDeviceVendor(),
+                getAndroidVersion(),
+                getSdkVersion()
+        );
     }
 
     private String readVersionName() {
