@@ -70,6 +70,15 @@
 - `assembleDebug` 已通过
 - 本机验证包已下载到：`C:\Dean-codex\packages\catenai-android-tv-legacy-dean\2026-04-14\app-debug.apk`
 
+真机验证结果：
+
+- 设备：`192.168.201.110`
+- 首次安装失败，错误是 `INSTALL_FAILED_SHARED_USER_INCOMPATIBLE`
+- 根因已确认：主清单里的 `android.uid.system` 被带到了 debug 包里，普通设备不接受非平台签名的 sharedUserId 安装
+- 修正后重新编译并安装成功
+- 启动链路正常：`SplashActivity -> BindActivity`
+- UI dump 已确认当前屏幕就是绑定页，包含“设备绑定 / 6 位绑定码 / 提交绑定 / 等待输入绑定码”
+
 ---
 
 ## 三、今天新增或修改的关键文件
@@ -84,6 +93,12 @@
 
 - `app/src/main/java/com/catenai/hotelos/legacy/SplashActivity.java`
 - `app/src/main/res/values/strings.xml`
+- `app/src/main/AndroidManifest.xml`
+
+## 新增补充
+
+- `app/src/release/AndroidManifest.xml`
+- `scripts/verify-manifest-policy.ps1`
 
 ---
 
@@ -103,6 +118,7 @@
 - 启动时 token 校验
 - 会话失效回绑定页
 - 持续可编译 release 包
+- 普通 Android 4.4 设备可安装的 debug 验证包
 
 ---
 
@@ -125,7 +141,7 @@
 
 - Day4：session 校验和启动认证链路，已完成
 
-这意味着当前工程已经不只是“能绑定”，而是“能绑定并能在下次启动时自我校验身份”。
+这意味着当前工程已经不只是“能绑定”，而是“能绑定并能在下次启动时自我校验身份”，而且已经在真机上完成了首次安装与启动验证。
 
 下一阶段是：
 
