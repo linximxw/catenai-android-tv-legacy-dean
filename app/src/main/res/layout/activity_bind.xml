@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvBindTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bind_title"
+        android:textColor="@color/splash_title"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBindSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/bind_subtitle"
+        android:textColor="@color/splash_subtitle"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etBindCode"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="6"
+        android:gravity="center"
+        android:hint="@string/bind_hint"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#7A7A7A"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnSubmitBind"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/bind_submit" />
+
+    <TextView
+        android:id="@+id/tvBindStatus"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/bind_status_idle"
+        android:textColor="@color/splash_subtitle"
+        android:textSize="15sp" />
+
+</LinearLayout>
