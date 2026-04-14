@@ -2,6 +2,9 @@
     <string name="app_name">Catenai Legacy 4.4</string>
     <string name="splash_title">Catenai Legacy</string>
     <string name="splash_subtitle">Android 4.4 baseline is ready for binding flow integration.</string>
+    <string name="splash_status_checking">正在校验设备会话...</string>
+    <string name="splash_status_ready">设备会话有效，准备进入下一阶段。</string>
+    <string name="splash_status_rebind">设备会话已失效，正在返回绑定页...</string>
     <string name="bind_title">设备绑定</string>
     <string name="bind_subtitle">请输入 6 位绑定码，完成酒店电视激活。</string>
     <string name="bind_hint">6 位绑定码</string>
