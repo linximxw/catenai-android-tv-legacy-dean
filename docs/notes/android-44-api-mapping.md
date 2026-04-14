@@ -39,6 +39,8 @@
 
 - guide 里的 Android 4.4 流程说明
 - 本地 5.0 快照仓库：`C:\Dean-codex\catenai-android-tv-legacy`
+- 5.0 参考仓库提炼的平台契约清单：
+  - `docs/notes/2026-04-14-reference-repo-platform-contract-checklist.md`
 
 ## 现在的结论
 
@@ -49,3 +51,15 @@
 3. 设备身份字段
 
 这样后面做绑定、session、配置拉取时，复杂度会低很多。
+
+## 补充提醒
+
+现在已经确认：
+
+- 5.0 参考仓库可以帮助我们对齐 `session / config / auth-state / policy`
+- 但拿不到真实绑定码、后台入口和最终产品规则
+
+所以 Day4 之后的工作方式应该是：
+
+1. 先按这份 API 笔记和平台契约清单对接口
+2. 再把“绑定码生成、错误码口径、成功后流向”向平台和产品确认
