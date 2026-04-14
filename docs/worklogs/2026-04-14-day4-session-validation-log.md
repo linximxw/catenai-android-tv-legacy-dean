@@ -67,6 +67,8 @@
 当前 release 产物：
 
 - `/opt/android/catenai_os_legacy/app/build/outputs/apk/release/app-release-unsigned.apk`
+- `assembleDebug` 已通过
+- 本机验证包已下载到：`C:\Dean-codex\packages\catenai-android-tv-legacy-dean\2026-04-14\app-debug.apk`
 
 ---
 
@@ -128,4 +130,3 @@
 下一阶段是：
 
 - Day5：TV 配置拉取和最小首页壳
-
